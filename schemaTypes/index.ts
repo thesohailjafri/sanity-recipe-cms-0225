@@ -1,3 +1,4 @@
+import banner from './documents/banner'
 import category from './documents/category'
 import recipe from './documents/recipe'
 import blockContent from './objects/block.content'
@@ -7,6 +8,7 @@ export const schemaTypes = [
   blockContent,
   seo,
   // Documents
+  banner,
   category,
   recipe,
 ]

@@ -29,13 +29,15 @@ export default defineType({
       type: 'text',
       title: 'Description',
       description: 'Description for the category',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'image',
       type: 'image',
-      title: 'Category Image',
+      title: 'Image',
       description: 'Image for the category, Ratio 4:3',
       options: {hotspot: true},
+      validation: (Rule) => Rule.required(),
     },
   ],
 })

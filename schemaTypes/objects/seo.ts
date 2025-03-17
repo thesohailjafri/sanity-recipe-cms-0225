@@ -26,6 +26,7 @@ export default defineField({
     {
       name: 'image',
       type: 'image',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'keywords',

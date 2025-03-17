@@ -89,44 +89,5 @@ export default defineType({
         },
       ],
     },
-    // Custom callout/info block
-    {
-      type: 'object',
-      name: 'callout',
-      title: 'Callout',
-      fields: [
-        {
-          name: 'style',
-          type: 'string',
-          title: 'Style',
-          options: {
-            list: [
-              {title: 'Info', value: 'info'},
-              {title: 'Warning', value: 'warning'},
-              {title: 'Success', value: 'success'},
-              {title: 'Error', value: 'error'},
-            ],
-          },
-        },
-        {
-          name: 'content',
-          type: 'text',
-          title: 'Callout Content',
-        },
-      ],
-      preview: {
-        select: {
-          style: 'style',
-          content: 'content',
-        },
-        prepare(selection) {
-          const {style, content} = selection
-          return {
-            title: `${style ? style.toUpperCase() : 'Callout'} Block`,
-            subtitle: content,
-          }
-        },
-      },
-    },
   ],
 })
