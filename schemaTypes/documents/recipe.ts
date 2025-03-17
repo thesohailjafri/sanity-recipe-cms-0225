@@ -35,10 +35,17 @@ export default defineType({
       title: 'Description',
     },
     {
-      name: 'category',
-      type: 'reference',
-      to: [{type: 'category'}],
-      title: 'Category',
+      name: 'categories',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'category',
+          },
+        },
+      ],
+      title: 'Categories',
     },
     {
       name: 'preparationTime',
