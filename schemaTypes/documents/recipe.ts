@@ -37,11 +37,17 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'category',
-      type: 'reference',
-      to: [{type: 'category'}],
-      title: 'Category',
-      validation: (Rule) => Rule.required(),
+      name: 'categories',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'category',
+          },
+        },
+      ],
+      title: 'Categories',
     },
     {
       name: 'preparationTime',
